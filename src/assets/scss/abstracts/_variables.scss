@@ -1,9 +1,17 @@
 $theme-colors: (
-  "system": #267F99,
-  "out": #52B9E9,
-  "println": #8F5E26,
-  "message": #A31515,
-  "intro": #000000
+  "parenthesis-a": #0431fa,
+  "parenthesis-b": #7b3814,
+  "print-write": #795e26,
+  "message": #a31515,
+  "system": #267f99,
+  "out": #0070c1,
+  "document": #001080,
+  "select": #00f,
+  "intro": #000,
+  "linkedin": #0077B5,
+  "github": #181717,
+  "cv": #F4444E,
+  "instagram": #E1306C
 );
 
 $spacers: (
@@ -17,12 +25,15 @@ $spacers: (
   7: 5rem,
   8: 6rem,
   9: 7rem,
-  10: 8rem,
-  11: 9rem,
-  12: 10rem,
-  13: 11rem,
-  14: 12rem,
-  15: 13rem,
-  16: 14rem,
-  17: 15rem
+  10: 7.5rem,
+  11: 8rem,
+  12: 9rem,
+  13: 10rem,
+  14: 11rem,
+  15: 12rem,
+  16: 13rem,
+  17: 14rem,
+  18: 15rem
 );
+
+$bootstrap-icons-font-dir: "bootstrap-icons/font/fonts";

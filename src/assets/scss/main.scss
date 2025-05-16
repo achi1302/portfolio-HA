@@ -15,9 +15,64 @@ nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); ;
 }
 
+.vstack.sticky-top {
+  position: sticky;
+  top: 6rem; // adjust as needed
+  height: fit-content;
+}
+
 h1 {
-  font-weight: 700;
   color: var(--bs-intro);
+}
+
+h3 {
+  color: var(--bs-intro);
+}
+
+.bi{
+  font-size: 2.1875rem;
+  color: var(--bs-body-color);
+  width: 2.1875rem;
+}
+
+
+.bi-linkedin:hover {
+  color: var(--bs-linkedin);
+}
+.bi-github:hover {
+  color: var(--bs-github);
+}
+.bi-file-earmark-person:hover {
+  color: var(--bs-cv);
+}
+.bi-instagram:hover {
+  color: var(--bs-instagram);
+}
+
+
+.parenthesis-a {
+  color: var(--bs-parenthesis-a);
+}
+.parenthesis-b {
+  color: var(--bs-parenthesis-b);
+}
+.print-write {
+  color: var(--bs-print-write);
+}
+.message {
+  color: var(--bs-message);
+}
+.system {
+  color: var(--bs-system);
+}
+.out {
+  color: var(--bs-out);
+}
+.document {
+  color: var(--bs-document);
+}
+.select {
+  color: var(--bs-select);
 }
 
 

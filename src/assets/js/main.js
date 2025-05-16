@@ -3,3 +3,69 @@ document.getElementById("themeToggle").addEventListener("click", () => {
   const currentTheme = html.getAttribute("data-bs-theme");
   html.setAttribute("data-bs-theme", currentTheme === "light" ? "dark" : "light");
 });
+
+const typewriterTexts = [
+  `<span class="system">System</span>.<span class="out">out</span>.<span class="print-write">println</span><span class="parenthesis-b">(</span><span class="message">"Computer Science Graduate"</span><span class="parenthesis-b">)</span>`,
+  `<span class="document"><span style="color: var(--bs-body-color)">&lt;</span>Web Developer<span style="color: var(--bs-body-color)">/&gt;</span></span>`,
+  `<span class="document">document</span>.<span class="print-write">write</span><span class="parenthesis-a">(</span><span class="message">"Full-Stack Developer"</span><span class="parenthesis-a">)</span>;`,
+  `<span class="print-write">print</span><span class="parenthesis-a">(</span><span class="message">"Data Engineer"</span><span class="parenthesis-a">)</span>`,
+  `<span class="print-write">print</span><span class="parenthesis-a">(</span><span class="message">"Data Scientist"</span><span class="parenthesis-a">)</span>`
+];
+
+const typewriterElement = document.getElementById('typewriter');
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function type() {
+  const currentText = typewriterTexts[textIndex];
+  const plainText = currentText.replace(/<[^>]+>/g, ''); // Remove HTML tags for typing effect
+  let displayText;
+
+  if (isDeleting) {
+    charIndex--;
+    displayText = plainText.substring(0, charIndex);
+  } else {
+    charIndex++;
+    displayText = plainText.substring(0, charIndex);
+  }
+
+  // Reconstruct HTML
+  let html = '';
+  let count = 0;
+  currentText.replace(/(<[^>]+>)|([^<]+)/g, (m, tag, text) => {
+    if (tag) {
+      html += tag;
+    } else if (text) {
+      let remain = charIndex - count;
+      if (remain > 0) {
+        html += text.substring(0, remain);
+        count += text.length;
+      }
+    }
+    return '';
+  });
+
+  typewriterElement.innerHTML = html;
+
+  let typeSpeed = isDeleting ? 30 : 60;
+
+  if (!isDeleting && charIndex === plainText.length) {
+    setTimeout(() => isDeleting = true, 1000);
+    setTimeout(type, 1000);
+    return;
+  }
+
+  if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    textIndex = (textIndex + 1) % typewriterTexts.length;
+    setTimeout(type, 500);
+    return;
+  }
+
+  setTimeout(type, typeSpeed);
+}
+
+type();
+
+document.write("welcome to my portfolio!");
