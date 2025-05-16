@@ -33,7 +33,21 @@ $spacers: (
   15: 12rem,
   16: 13rem,
   17: 14rem,
-  18: 15rem
+  18: 15rem,
+  19: 16rem,
+  20: 17rem,
 );
 
 $bootstrap-icons-font-dir: "bootstrap-icons/font/fonts";
+
+$position-values: (
+  0: 0,
+  6: 6%,
+  12: 12%,
+  16: 16%,
+  18: 18%,
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+);

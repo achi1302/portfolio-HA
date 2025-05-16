@@ -10,7 +10,7 @@
 90C:\Users\hecto\Documents\portfolio-HA\node_modules\@popperjs\core\lib\createPopper.js.flow133916561573431228 0
 80C:\Users\hecto\Documents\portfolio-HA\src\assets\scss\abstracts\_typography.scss133918499796550902 0
 61C:\Users\hecto\Documents\portfolio-HA\node_modules\@parcel\fs133917340285989889 1
-42C:\Users\hecto\Documents\portfolio-HA\dist133918559394514684 1
+42C:\Users\hecto\Documents\portfolio-HA\dist133919056717074160 1
 55C:\Users\hecto\Documents\portfolio-HA\package-lock.json133918189022315391 0
 89C:\Users\hecto\Documents\portfolio-HA\node_modules\bootstrap-icons\icons\camera-reels.svg133918183218911677 0
 77C:\Users\hecto\Documents\portfolio-HA\node_modules\caniuse-lite\dist\unpacker133917340291885543 1
@@ -32,7 +32,7 @@
 93C:\Users\hecto\Documents\portfolio-HA\node_modules\bootstrap-icons\icons\file-spreadsheet.svg133918183222755101 0
 99C:\Users\hecto\Documents\portfolio-HA\node_modules\@parcel\feature-flags\test\feature-flags.test.js133917340284779939 0
 83C:\Users\hecto\Documents\portfolio-HA\node_modules\@swc\helpers\_\_class_call_check133917340286740007 1
-79C:\Users\hecto\Documents\portfolio-HA\src\assets\scss\abstracts\_variables.scss133919012643017986 0
+79C:\Users\hecto\Documents\portfolio-HA\src\assets\scss\abstracts\_variables.scss133919057637768403 0
 68C:\Users\hecto\Documents\portfolio-HA\node_modules\sass\types\legacy133917356044714448 1
 98C:\Users\hecto\Documents\portfolio-HA\node_modules\bootstrap-icons\icons\hand-index-thumb-fill.svg133918183223658937 0
 41C:\Users\hecto\Documents\portfolio-HA\src133917342822537695 1
@@ -62,7 +62,7 @@
 69C:\Users\hecto\Documents\portfolio-HA\node_modules\chalk\package.json133917340274804119 0
 67C:\Users\hecto\Documents\portfolio-HA\node_modules\dotenv\config.js133917340276329318 0
 115C:\Users\hecto\Documents\portfolio-HA\node_modules\@swc\helpers\_\_class_static_private_field_spec_set\package.json133917340287135281 0
-52C:\Users\hecto\Documents\portfolio-HA\src\index.html133918555457471981 0
+52C:\Users\hecto\Documents\portfolio-HA\src\index.html133919056716875168 0
 55C:\Users\hecto\Documents\portfolio-HA\src\assets\images133918511710399577 1
 74C:\Users\hecto\Documents\portfolio-HA\node_modules\@parcel\workers\lib\web133917340281045415 1
 87C:\Users\hecto\Documents\portfolio-HA\node_modules\caniuse-lite\data\features\webgpu.js133917340294305446 0
@@ -83,7 +83,7 @@
 63C:\Users\hecto\Documents\portfolio-HA\node_modules\caniuse-lite133917340294642078 1
 63C:\Users\hecto\Documents\portfolio-HA\src\assets\scss\abstracts133917532093519121 1
 72C:\Users\hecto\Documents\portfolio-HA\node_modules\json5\lib\register.js133917340274974212 0
-59C:\Users\hecto\Documents\portfolio-HA\src\assets\js\main.js133919012132282005 0
+59C:\Users\hecto\Documents\portfolio-HA\src\assets\js\main.js133919014290166015 0
 94C:\Users\hecto\Documents\portfolio-HA\node_modules\bootstrap-icons\icons\arrow-down-circle.svg133918183216801976 0
 91C:\Users\hecto\Documents\portfolio-HA\node_modules\utility-types\dist\functional-helpers.js133917340275332124 0
 89C:\Users\hecto\Documents\portfolio-HA\node_modules\@parcel\core\test\EntryRequest.test.js133917340287005558 0
@@ -95,7 +95,7 @@
 83C:\Users\hecto\Documents\portfolio-HA\node_modules\bootstrap-icons\icons\dice-3.svg133918183221215085 0
 89C:\Users\hecto\Documents\portfolio-HA\node_modules\bootstrap\scss\mixins\_color-mode.scss133916561577469205 0
 99C:\Users\hecto\Documents\portfolio-HA\node_modules\@popperjs\core\lib\modifiers\applyStyles.js.flow133916561574974475 0
-63C:\Users\hecto\Documents\portfolio-HA\src\assets\scss\main.scss133919007364905821 0
+63C:\Users\hecto\Documents\portfolio-HA\src\assets\scss\main.scss133919045609941066 0
 82C:\Users\hecto\Documents\portfolio-HA\node_modules\caniuse-lite\data\regions\HR.js133917340289228967 0
 94C:\Users\hecto\Documents\portfolio-HA\node_modules\@parcel\watcher\src\linux\InotifyBackend.cc133917340275306083 0
 80C:\Users\hecto\Documents\portfolio-HA\node_modules\bootstrap-icons\icons\cup.svg133918183220821554 0
@@ -1160,7 +1160,7 @@
 80C:\Users\hecto\Documents\portfolio-HA\node_modules\@parcel\source-map\index.d.ts133917340284415920 0
 94C:\Users\hecto\Documents\portfolio-HA\node_modules\caniuse-lite\data\features\accelerometer.js133917340275068031 0
 76C:\Users\hecto\Documents\portfolio-HA\node_modules\ordered-binary\index.d.ts133917340275677132 0
-68C:\Users\hecto\Documents\portfolio-HA\dist\portfolio-HA.4717fcfd.css133918537709863898 0
+68C:\Users\hecto\Documents\portfolio-HA\dist\portfolio-HA.4717fcfd.css133919048488693601 0
 67C:\Users\hecto\Documents\portfolio-HA\node_modules\ometa\index.html133916563698435553 0
 88C:\Users\hecto\Documents\portfolio-HA\node_modules\caniuse-lite\data\features\ch-unit.js133917340280741606 0
 68C:\Users\hecto\Documents\portfolio-HA\node_modules\is-number\LICENSE133917340274328194 0
@@ -4283,7 +4283,7 @@
 73C:\Users\hecto\Documents\portfolio-HA\node_modules\bootstrap\scss\helpers133916561578304080 1
 84C:\Users\hecto\Documents\portfolio-HA\node_modules\bootstrap-icons\icons\sliders.svg133918183227365939 0
 82C:\Users\hecto\Documents\portfolio-HA\node_modules\bootstrap-icons\icons\flask.svg133918183223184144 0
-72C:\Users\hecto\Documents\portfolio-HA\dist\portfolio-HA.4717fcfd.css.map133918537709883876 0
+72C:\Users\hecto\Documents\portfolio-HA\dist\portfolio-HA.4717fcfd.css.map133919048488717854 0
 89C:\Users\hecto\Documents\portfolio-HA\node_modules\bootstrap-icons\icons\justify-left.svg133918183224374907 0
 84C:\Users\hecto\Documents\portfolio-HA\node_modules\bootstrap-icons\icons\flower1.svg133918183223207164 0
 84C:\Users\hecto\Documents\portfolio-HA\node_modules\bootstrap-icons\icons\flower2.svg133918183223217167 0
@@ -6008,7 +6008,7 @@
 107C:\Users\hecto\Documents\portfolio-HA\node_modules\@parcel\package-manager\test\fixtures\has-foo\subpackage133917340285750133 1
 120C:\Users\hecto\Documents\portfolio-HA\node_modules\@parcel\package-manager\test\fixtures\has-foo\subpackage\package.json133917340285760134 0
 113C:\Users\hecto\Documents\portfolio-HA\node_modules\@parcel\package-manager\test\fixtures\has-foo\node_modules\foo133917340285541769 1
-67C:\Users\hecto\Documents\portfolio-HA\dist\portfolio-HA.4d7b059d.js133918559394481492 0
+67C:\Users\hecto\Documents\portfolio-HA\dist\portfolio-HA.4d7b059d.js133919048488574141 0
 126C:\Users\hecto\Documents\portfolio-HA\node_modules\@parcel\package-manager\test\fixtures\has-foo\node_modules\foo\package.json133917340285541769 0
 125C:\Users\hecto\Documents\portfolio-HA\node_modules\@parcel\package-manager\test\fixtures\has-a-not-yet-installed\package.json133917340285494421 0
 96C:\Users\hecto\Documents\portfolio-HA\node_modules\@parcel\package-manager\src\installPackage.js133917340285109872 0
@@ -6307,8 +6307,8 @@
 64C:\Users\hecto\Documents\portfolio-HA\node_modules\.bin\sass.ps1133917356046196615 0
 82C:\Users\hecto\Documents\portfolio-HA\node_modules\.bin\update-browserslist-db.cmd133917340294869420 0
 82C:\Users\hecto\Documents\portfolio-HA\node_modules\.bin\update-browserslist-db.ps1133917340294869420 0
-64C:\Users\hecto\Documents\portfolio-HA\dist\11096817.3cae2e03.png133918537709254398 0
-63C:\Users\hecto\Documents\portfolio-HA\dist\4824797.3f3365f5.png133918537709264394 0
+64C:\Users\hecto\Documents\portfolio-HA\dist\11096817.3cae2e03.png133919048488108290 0
+63C:\Users\hecto\Documents\portfolio-HA\dist\4824797.3f3365f5.png133919048488108290 0
 61C:\Users\hecto\Documents\portfolio-HA\dist\61109.e8ea420f.png133918163333748142 0
-53C:\Users\hecto\Documents\portfolio-HA\dist\index.html133918555457620207 0
-71C:\Users\hecto\Documents\portfolio-HA\dist\portfolio-HA.4d7b059d.js.map133918559394504608 0
+53C:\Users\hecto\Documents\portfolio-HA\dist\index.html133919056717074160 0
+71C:\Users\hecto\Documents\portfolio-HA\dist\portfolio-HA.4d7b059d.js.map133919048488656019 0

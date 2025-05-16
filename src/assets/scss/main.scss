@@ -15,18 +15,22 @@ nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); ;
 }
 
-.vstack.sticky-top {
-  position: sticky;
-  top: 6rem; // adjust as needed
-  height: fit-content;
-}
+
 
 h1 {
   color: var(--bs-intro);
 }
 
-h3 {
+#typewriter {
   color: var(--bs-intro);
+}
+
+.typewriter-dash {
+  color: var(--bs-body-color);
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  50% {opacity: 0;}
 }
 
 .bi{
@@ -35,6 +39,14 @@ h3 {
   width: 2.1875rem;
 }
 
+.vstack.sticky-top {
+  top: 20rem;
+  height: fit-content;
+}
+
+#content {
+  top: 5rem;
+}
 
 .bi-linkedin:hover {
   color: var(--bs-linkedin);
@@ -75,5 +87,11 @@ h3 {
   color: var(--bs-select);
 }
 
-
+#about-me-text {
+  max-width: 640px;
+}
+#about-me-skills {
+  min-width: 350px;
+  margin-left: 8rem;
+}
 

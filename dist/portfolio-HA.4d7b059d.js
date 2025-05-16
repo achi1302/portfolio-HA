@@ -673,7 +673,7 @@ document.getElementById("themeToggle").addEventListener("click", ()=>{
     html.setAttribute("data-bs-theme", currentTheme === "light" ? "dark" : "light");
 });
 const typewriterTexts = [
-    `<span class="system">System</span>.<span class="out">out</span>.<span class="print-write">println</span><span class="parenthesis-b">(</span><span class="message">"Computer Science Graduate"</span><span class="parenthesis-b">)</span>`,
+    `<span class="system">System</span>.<span class="out">out</span>.<span class="print-write">println</span><span class="parenthesis-b">(</span><span class="message">"Computer Science Graduate"</span><span class="parenthesis-b">)</span>;`,
     `<span class="document"><span style="color: var(--bs-body-color)">&lt;</span>Web Developer<span style="color: var(--bs-body-color)">/&gt;</span></span>`,
     `<span class="document">document</span>.<span class="print-write">write</span><span class="parenthesis-a">(</span><span class="message">"Full-Stack Developer"</span><span class="parenthesis-a">)</span>;`,
     `<span class="print-write">print</span><span class="parenthesis-a">(</span><span class="message">"Data Engineer"</span><span class="parenthesis-a">)</span>`,
@@ -708,7 +708,7 @@ function type() {
         }
         return '';
     });
-    typewriterElement.innerHTML = html;
+    typewriterElement.innerHTML = html + '<span class="typewriter-dash">|</span>';
     let typeSpeed = isDeleting ? 30 : 60;
     if (!isDeleting && charIndex === plainText.length) {
         setTimeout(()=>isDeleting = true, 1000);
