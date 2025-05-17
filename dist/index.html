@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="/portfolio-HA.4717fcfd.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent" data-bs-offset="80" tabindex="0">
 
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid">
             <!-- Logo -->
             <a class="navbar-brand" href="#">H</a>
@@ -27,8 +27,8 @@
             <!-- Collapsible content -->
             <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0 text-center">
-                    <li class="nav-item"><a class="nav-link" href="#">INTRO</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">ABOUT ME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#intro">INTRO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about-me">ABOUT ME</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">WORK</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">PROJECTS</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
@@ -48,7 +48,7 @@
         </div>
 
         <div class="flex-grow-1 position-relative ms-20" id="content">
-            <div class="d-flex align-items-center" id="intro">
+            <div class="d-flex align-items-center pb-17" id="intro">
                 <div class="flex-grow-1 w-50" id="intro-text">
                     <h1 class="w-50">Hello I'm</h1>
                     <h1 class="w-100 mb-5">Hector Alexanderson</h1>
@@ -63,8 +63,8 @@
                 </div>
             </div>
 
-            <div class="w-100" id="about-me">
-                <h2 class="text-center mb-5">Get To Know Me</h2>
+            <div class="w-100 pb-12" id="about-me">
+                <h2 class="mb-5 w-80 text-center">Get To Know Me</h2>
                 
                 <div class="d-flex align-items-start flex-wrap justify-content-start" id="about-me-content">
                     <div class="flex-grow-1" id="about-me-text">
@@ -79,14 +79,32 @@
 
                     <div id="about-me-skills">
                         <h3 class="mb-4 text-center">Skills</h3>
-                        <div class="d-flex flex-wrap justify-content-center gap-3">
-                            <img src="/python.27380e2d.png" alt="Python" width="50" height="50">
-                            <img src="/rstudio.1c5050a0.png" alt="RStudio" width="50" height="50">
-                            <img src="/powerbi.56392f2f.png" alt="PowerBi" width="50" height="50">
-                            <img src="/bigquery.4ed9ffb7.png" alt="BigQuery" width="50" height="50">
-                            <img src="/html.f6161282.png" alt="HTML" width="50" height="50">
-                            <img src="/css.23adf131.png" alt="CSS" width="50" height="50">
-                            <img src="/bootstrap.8baa9b58.png" alt="Bootstarp" width="50" height="50">
+                        <div class="icon-cloud position-relative w-auto">
+                            <img class="skill-icon" src="/python.27380e2d.png" alt="Python" width="60" height="60">
+                            <img class="skill-icon" src="/rstudio.1c5050a0.png" alt="RStudio" width="60" height="60">
+                            <img class="skill-icon" src="/powerbi.56392f2f.png" alt="PowerBi" width="60" height="60">
+                            <img class="skill-icon" src="/apachespark.05f74eba.png" alt="ApacheSpark" width="60" height="60">
+                            <img class="skill-icon" src="/snowflake.4401a7f7.png" alt="Snowflake" width="60" height="60">
+                            <img class="skill-icon" src="/bigquery.4ed9ffb7.png" alt="BigQuery" width="60" height="60">
+                            <img class="skill-icon" src="/html.f6161282.png" alt="HTML" width="60" height="60">
+                            <img class="skill-icon" src="/css.23adf131.png" alt="CSS" width="60" height="60">
+                            <img class="skill-icon" src="/js.2d93bb6a.png" alt="JavaScript" width="60" height="60">
+                            <img class="skill-icon" src="/ts.6bfbc8a5.png" alt="TypeScript" width="60" height="60">
+                            <img class="skill-icon" src="/react.35fc4835.png" alt="React" width="60" height="60">
+                            <img class="skill-icon" src="/bootstrap.8baa9b58.png" alt="Bootstarp" width="60" height="60">
+                            <img class="skill-icon" src="/tailwind.0032b67a.png" alt="Tailwindcss" width="60" height="60">
+                            <img class="skill-icon" src="/angular.ee88a0b7.png" alt="Angular" width="60" height="60">
+                            <img class="skill-icon" src="/wordpress.2236d71f.png" alt="WordPress" width="60" height="60">
+                            <img class="skill-icon" src="/figma.8782969f.png" alt="Figma" width="60" height="60">
+                            <img class="skill-icon" src="/node.74e3f7c0.png" alt="NodeJS" width="60" height="60">
+                            <img class="skill-icon" src="/express.c20a3a48.png" alt="ExpressJS" width="60" height="60">
+                            <img class="skill-icon" src="/kotlin.a1a7afdd.png" alt="Kotlin" width="60" height="60">
+                            <img class="skill-icon" src="/postgre.0be860ca.png" alt="PostgreSQL" width="60" height="60">
+                            <img class="skill-icon" src="/mongo.98df9e86.png" alt="MongoDB" width="60" height="60">
+                            <img class="skill-icon" src="/mysql.db777c9a.png" alt="MySQL" width="60" height="60">
+                            <img class="skill-icon" src="/firebase.10161723.png" alt="Firebase" width="60" height="60">
+                            <img class="skill-icon" src="/github.3981baed.png" alt="Github" width="60" height="60">
+                            <img class="skill-icon" src="/git.984d4450.png" alt="Git" width="60" height="60">
                         </div>
                     </div>
                 </div>
@@ -97,6 +115,7 @@
     
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script type="module" src="/portfolio-HA.4d7b059d.js"></script>
 
 </body></html>

@@ -68,4 +68,30 @@ function type() {
 
 type();
 
-document.write("welcome to my portfolio!");
+document.addEventListener("DOMContentLoaded", () => {
+  const cloud = document.querySelector('.icon-cloud');
+  const icons = document.querySelectorAll('.skill-icon');
+  const cloudWidth = cloud.offsetWidth;
+  const cloudHeight = cloud.offsetHeight;
+  const iconSize = 60;
+  const padding = 20;
+
+  icons.forEach(icon => {
+    // Radom Initial Position
+    const x = Math.random() * (cloudWidth - iconSize - padding * 2) + padding;
+    const y = Math.random() * (cloudHeight - iconSize - padding * 2) + padding;
+    icon.style.left = `${x}px`;
+    icon.style.top = `${y}px`;
+
+    // Animate
+    gsap.to(icon, {
+      x: `+=${Math.random() * 120 - 60}`,
+      y: `+=${Math.random() * 120 - 60}`,
+      repeat: -1,
+      yoyo: true,
+      duration: 2 + Math.random() * 2,
+      ease: "sine.inOut",
+      delay: Math.random()
+    })
+  })
+});

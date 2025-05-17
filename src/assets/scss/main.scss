@@ -6,48 +6,29 @@
 @import "./abstracts/themes";
 @import "./abstracts/typography";
 // Then add additional custom code here
+html {
+  scroll-behavior: smooth;
+}
 body {
     font-family: 'Roboto Mono', monospace;
 }
-
 nav {
     background-color: var(--bs-navbar-bg);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); ;
 }
-
-
-
 h1 {
   color: var(--bs-intro);
-}
-
-#typewriter {
-  color: var(--bs-intro);
-}
-
-.typewriter-dash {
-  color: var(--bs-body-color);
-  animation: blink 1s steps(1) infinite;
-}
-@keyframes blink {
-  50% {opacity: 0;}
-}
-
-.bi{
-  font-size: 2.1875rem;
-  color: var(--bs-body-color);
-  width: 2.1875rem;
 }
 
 .vstack.sticky-top {
   top: 20rem;
   height: fit-content;
 }
-
-#content {
-  top: 5rem;
+.bi{
+  font-size: 2.1875rem;
+  color: var(--bs-body-color);
+  width: 2.1875rem;
 }
-
 .bi-linkedin:hover {
   color: var(--bs-linkedin);
 }
@@ -61,7 +42,13 @@ h1 {
   color: var(--bs-instagram);
 }
 
+#content {
+  top: 5rem;
+}
 
+#typewriter {
+  color: var(--bs-intro);
+}
 .parenthesis-a {
   color: var(--bs-parenthesis-a);
 }
@@ -86,12 +73,28 @@ h1 {
 .select {
   color: var(--bs-select);
 }
+.typewriter-dash {
+  color: var(--bs-body-color);
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  50% {opacity: 0;}
+}
 
 #about-me-text {
   max-width: 640px;
 }
 #about-me-skills {
+  width: 450px;
   min-width: 350px;
   margin-left: 8rem;
+}
+
+.icon-cloud {
+  height: 550px;
+}
+.skill-icon {
+  position: absolute;
+  will-change: trasnform;
 }
 

@@ -9262,6 +9262,10 @@ textarea.form-control-lg {
   width: 75% !important;
 }
 
+.w-80 {
+  width: 80% !important;
+}
+
 .w-100 {
   width: 100% !important;
 }
@@ -21008,6 +21012,10 @@ p {
   font-weight: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Roboto Mono, monospace;
 }
@@ -21017,25 +21025,8 @@ nav {
   box-shadow: 0 2px 5px #0000001a;
 }
 
-h1, .h1, #typewriter {
+h1, .h1 {
   color: var(--bs-intro);
-}
-
-.typewriter-dash {
-  color: var(--bs-body-color);
-  animation: 1s step-end infinite blink;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
-.bi {
-  color: var(--bs-body-color);
-  width: 2.1875rem;
-  font-size: 2.1875rem;
 }
 
 .vstack.sticky-top {
@@ -21043,8 +21034,10 @@ h1, .h1, #typewriter {
   top: 20rem;
 }
 
-#content {
-  top: 5rem;
+.bi {
+  color: var(--bs-body-color);
+  width: 2.1875rem;
+  font-size: 2.1875rem;
 }
 
 .bi-linkedin:hover {
@@ -21061,6 +21054,14 @@ h1, .h1, #typewriter {
 
 .bi-instagram:hover {
   color: var(--bs-instagram);
+}
+
+#content {
+  top: 5rem;
+}
+
+#typewriter {
+  color: var(--bs-intro);
 }
 
 .parenthesis-a {
@@ -21095,12 +21096,33 @@ h1, .h1, #typewriter {
   color: var(--bs-select);
 }
 
+.typewriter-dash {
+  color: var(--bs-body-color);
+  animation: 1s step-end infinite blink;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 #about-me-text {
   max-width: 640px;
 }
 
 #about-me-skills {
+  width: 450px;
   min-width: 350px;
   margin-left: 8rem;
+}
+
+.icon-cloud {
+  height: 550px;
+}
+
+.skill-icon {
+  will-change: trasnform;
+  position: absolute;
 }
 /*# sourceMappingURL=portfolio-HA.4717fcfd.css.map */
