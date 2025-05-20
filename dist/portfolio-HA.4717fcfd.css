@@ -21029,6 +21029,12 @@ h1, .h1 {
   color: var(--bs-intro);
 }
 
+a {
+  color: var(--bs-body-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
 .vstack.sticky-top {
   height: fit-content;
   top: 20rem;
@@ -21124,5 +21130,15 @@ h1, .h1 {
 .skill-icon {
   will-change: trasnform;
   position: absolute;
+}
+
+.img-fluid.rounded {
+  object-fit: cover;
+  width: 640px;
+  height: 400px;
+}
+
+.aaca-link {
+  color: var(--bs-body-color);
 }
 /*# sourceMappingURL=portfolio-HA.4717fcfd.css.map */
