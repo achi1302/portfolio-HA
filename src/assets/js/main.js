@@ -8,7 +8,7 @@ const typewriterTexts = [
   `<span class="system">System</span>.<span class="out">out</span>.<span class="print-write">println</span><span class="parenthesis-b">(</span><span class="message">"Computer Science Graduate"</span><span class="parenthesis-b">)</span>;`,
   `<span class="document"><span style="color: var(--bs-body-color)">&lt;</span>Web Developer<span style="color: var(--bs-body-color)">/&gt;</span></span>`,
   `<span class="document">document</span>.<span class="print-write">write</span><span class="parenthesis-a">(</span><span class="message">"Full-Stack Developer"</span><span class="parenthesis-a">)</span>;`,
-  `<span class="print-write">print</span><span class="parenthesis-a">(</span><span class="message">"Data Engineer"</span><span class="parenthesis-a">)</span>`,
+  `<span class="select">SELECT</span><span class="column-name"> DATA_ENGINEER</span>`,
   `<span class="print-write">print</span><span class="parenthesis-a">(</span><span class="message">"Data Scientist"</span><span class="parenthesis-a">)</span>`
 ];
 

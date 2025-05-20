@@ -25,14 +25,20 @@ a {
   font-weight: 700;
 }
 
+
 .vstack.sticky-top {
   top: 20rem;
   height: fit-content;
 }
-.bi{
+#socials a {
   font-size: 2.1875rem;
-  color: var(--bs-body-color);
-  width: 2.1875rem;
+  width: 2.1875rem; 
+  color: var(--bs-body-color);        
+  transition: transform 0.2s cubic-bezier(.4,2,.6,1), color 0.2s;
+  cursor: pointer;
+}
+#socials a:hover {
+  transform: scale(1.3);
 }
 .bi-linkedin:hover {
   color: var(--bs-linkedin);
@@ -47,9 +53,11 @@ a {
   color: var(--bs-instagram);
 }
 
+
 #content {
   top: 5rem;
 }
+
 
 #typewriter {
   color: var(--bs-intro);
@@ -86,6 +94,7 @@ a {
   50% {opacity: 0;}
 }
 
+
 #about-me-text {
   max-width: 640px;
 }
@@ -95,12 +104,13 @@ a {
   margin-left: 8rem;
 }
 
+
 .icon-cloud {
   height: 550px;
 }
 .skill-icon {
   position: absolute;
-  will-change: trasnform;
+  will-change: transform;
 }
 
 
@@ -108,6 +118,7 @@ a {
   width: 640px; 
   height: 400px; 
   object-fit: cover;
+  border: 5px var(--bs-body-color) solid;
 }
 .aaca-link{
   color: var(--bs-body-color)
