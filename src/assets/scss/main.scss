@@ -86,6 +86,18 @@ a {
 .select {
   color: var(--bs-select);
 }
+.let {
+  color: var(--bs-let);
+}
+.role {
+  color: var(--bs-role);
+}
+.string {
+  color: var(--bs-string);
+}
+.class {
+  color: var(--bs-class);
+}
 .typewriter-dash {
   color: var(--bs-body-color);
   animation: blink 1s steps(1) infinite;
@@ -124,3 +136,23 @@ a {
   color: var(--bs-body-color)
 }
 
+
+#contact-bg {
+  background-color: var(--bs-contact-square);
+}
+.form-label {
+  font-size: 20px;
+}
+#contact-info i.bi {
+  font-size: 3.75rem;
+}
+.btn {
+  font-size: 20px;
+  border: 2px solid var(--bs-body-color);
+  transition: transform 0.2s cubic-bezier(.4,2,.6,1), color 0.2s;
+}
+.btn:hover {
+  background-color: var(--bs-body-color);
+  color: var(--bs-contact-square);
+  transform: scale(1.3);
+}

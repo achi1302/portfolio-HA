@@ -13,11 +13,16 @@
   --bs-document: #001080;
   --bs-select: #00f;
   --bs-column-name: #000;
+  --bs-let: #00f;
+  --bs-role: #001080;
+  --bs-string: #267f99;
+  --bs-class: #800000;
   --bs-intro: #000;
   --bs-linkedin: #0077B5;
   --bs-github: #181717;
   --bs-cv: #F4444E;
   --bs-instagram: #E1306C;
+  --bs-contact-square: #fff;
 }
 
 [data-bs-theme="dark"] {
@@ -34,9 +39,14 @@
   --bs-document: #9cdcfe;
   --bs-select: #569cd6;
   --bs-column-name: #d4d4d4;
+  --bs-let: #569cd6;
+  --bs-role: #9cdcfe;
+  --bs-string: #4ec9b0;
+  --bs-class: #d7ba7d;
   --bs-intro: #FFFFFF;
   --bs-linkedin: #0077B5;
   --bs-github: #FFF;
   --bs-cv: #F4444E;
   --bs-instagram: #E1306C;
+  --bs-contact-square: #27272c;
 }

@@ -9,7 +9,12 @@ const typewriterTexts = [
   `<span class="document"><span style="color: var(--bs-body-color)">&lt;</span>Web Developer<span style="color: var(--bs-body-color)">/&gt;</span></span>`,
   `<span class="document">document</span>.<span class="print-write">write</span><span class="parenthesis-a">(</span><span class="message">"Full-Stack Developer"</span><span class="parenthesis-a">)</span>;`,
   `<span class="select">SELECT</span><span class="column-name"> DATA_ENGINEER</span>`,
-  `<span class="print-write">print</span><span class="parenthesis-a">(</span><span class="message">"Data Scientist"</span><span class="parenthesis-a">)</span>`
+  `<span class="print-write">print</span><span class="parenthesis-a">(</span><span class="message">"Data Scientist"</span><span class="parenthesis-a">)</span>`,
+  `<span class="document">Console</span>.<span class="document">WriteLine</span><span class="parenthesis-a">(</span><span class="message">"Computer Science Graduate"</span><span class="parenthesis-a">)</span>;`,
+  `<span class="class">.Web-Developer</span><span class="parenthesis-a"> {}</span>`,
+  `<span class="let">let</span><span class="role"> role</span>:<span class="string"> string</span> = <span class="message">"Full-Stack Developer"</span>;`,
+  `<span class="print-write">print</span><span class="parenthesis-a">(</span><span class="message">"Data Engineer"</span><span class="parenthesis-a">)</span>`,
+  `<span class="print-write">cat</span><span class="parenthesis-a">(</span><span class="message">"Data Scientist"</span><span class="parenthesis-a">)</span>`
 ];
 
 const typewriterElement = document.getElementById('typewriter');
