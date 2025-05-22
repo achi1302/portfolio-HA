@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@lottiefiles/dotlottie-web": "^0.44.0",
     "bootstrap": "^5.3.6",
     "bootstrap-icons": "^1.13.1",
     "scss": "^0.2.4"

@@ -1,3 +1,12 @@
+import { DotLottie } from '@lottiefiles/dotlottie-web';
+
+const dotlottie = new DotLottie({
+  autoplay: true,
+  loop: true,
+  canvas: document.querySelector('#dotlottie-canvas'),
+  src: "https://lottie.host/a1bd321c-ed9e-4184-8a2f-db39b0512094/gVrbk5r8vz.lottie",
+});
+
 document.getElementById("themeToggle").addEventListener("click", () => {
   const html = document.documentElement;
   const currentTheme = html.getAttribute("data-bs-theme");
