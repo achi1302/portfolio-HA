@@ -15,36 +15,44 @@
 <body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent" data-bs-offset="80" tabindex="0">
 
     <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container-fluid px-0 position-relative">
-
-            <a class="navbar-brand d-lg-none" href="#">H</a>
-
-           
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-
-            
-            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-
-          
-                <div class="d-flex align-items-center position-relative" style="transform: translateX(-30px)">
-        
-                    <a class="navbar-brand d-none d-lg-block me-8" href="#">H</a>
-
+        <div class="container-fluid">
+            <div class="d-flex w-100 align-items-center">
+                <!-- Left -->
+                <div class="flex-grow-1 d-flex justify-content-start justify-content-lg-center">
+                    <a class="navbar-brand m-0" href="#">H</a>
+                </div>
+                <!-- Center (desktop only) -->
+                <div class="flex-grow-1 d-none d-lg-flex justify-content-center">
                     <ul class="navbar-nav mb-2 mb-lg-0 text-center">
+                        <li class="nav-item"><a class="nav-link" href="#intro">INTRO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about-me">ABOUT ME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#work-projects">WORK</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+                <!-- Right -->
+                <div class="flex-grow-1 d-flex justify-content-end justify-content-lg-center align-items-center">
+                    <i class="bi bi-brightness-high d-none d-lg-block" style="color: var(--bs-body-color); font-size: 1.5rem" id="themeToggle"></i>
+                    <button class="navbar-toggler ms-2 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <!-- Collapsed content (mobile only) -->
+            <div class="navbar-collapse mt-2 d-lg-none" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 text-center d-lg-none">
                     <li class="nav-item"><a class="nav-link" href="#intro">INTRO</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about-me">ABOUT ME</a></li>
                     <li class="nav-item"><a class="nav-link" href="#work-projects">WORK</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
-                    </ul>
+                </ul>
+                <div class="d-flex justify-content-center mt-3 d-lg-none">
+                    <i class="bi bi-brightness-high" style="color: var(--bs-body-color); font-size: 1.5rem" id="themeToggle"></i>
                 </div>
-
-                
-                <i class="bi bi-brightness-high ms-3" style="color: var(--bs-body-color); font-size: 1.5rem" id="themeToggle"></i>
             </div>
         </div>
     </nav>
+
     <div class="d-flex" id="display">
 
         <div class="vstack gap-3 start-6 sticky-top " id="socials">
