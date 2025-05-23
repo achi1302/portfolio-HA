@@ -21594,8 +21594,13 @@ p {
   font-weight: normal;
 }
 
+#intro-text .intro-header, #intro-text .intro-typewriter, #intro-text .intro-description, #content > :not(#intro), footer {
+  opacity: 0;
+}
+
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {

@@ -6,8 +6,19 @@
 @import "./abstracts/themes";
 @import "./abstracts/typography";
 // Then add additional custom code here
+#intro-text .intro-header,
+#intro-text .intro-typewriter,
+#intro-text .intro-description {
+  opacity: 0;
+}
+#content > *:not(#intro),
+footer {
+  opacity: 0;
+}
+
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 body {
     font-family: 'Roboto Mono', monospace;

@@ -668,17 +668,6 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"7yfa3":[function(require,module,exports,__globalThis) {
 var _dotlottieWeb = require("@lottiefiles/dotlottie-web");
-const dotlottie = new (0, _dotlottieWeb.DotLottie)({
-    autoplay: true,
-    loop: true,
-    canvas: document.querySelector('#dotlottie-canvas'),
-    src: "https://lottie.host/a1bd321c-ed9e-4184-8a2f-db39b0512094/gVrbk5r8vz.lottie"
-});
-document.getElementById("themeToggle").addEventListener("click", ()=>{
-    const html = document.documentElement;
-    const currentTheme = html.getAttribute("data-bs-theme");
-    html.setAttribute("data-bs-theme", currentTheme === "light" ? "dark" : "light");
-});
 const typewriterTexts = [
     `<span class="system">System</span>.<span class="out">out</span>.<span class="print-write">println</span><span class="parenthesis-b">(</span><span class="message">"Computer Science Graduate"</span><span class="parenthesis-b">)</span>;`,
     `<span class="document"><span style="color: var(--bs-body-color)">&lt;</span>Web Developer<span style="color: var(--bs-body-color)">/&gt;</span></span>`,
@@ -691,13 +680,160 @@ const typewriterTexts = [
     `<span class="print-write">print</span><span class="parenthesis-a">(</span><span class="message">"Data Engineer"</span><span class="parenthesis-a">)</span>`,
     `<span class="print-write">cat</span><span class="parenthesis-a">(</span><span class="message">"Data Scientist"</span><span class="parenthesis-a">)</span>`
 ];
-const typewriterElement = document.getElementById('typewriter');
+function runTypewriter(element, text, callback) {
+    const plainText = text.replace(/<[^>]+>/g, '');
+    let charIndex = 0;
+    let html = '';
+    let count = 0;
+    function type() {
+        charIndex++;
+        // Reconstruct HTML
+        html = '';
+        count = 0;
+        text.replace(/(<[^>]+>)|([^<]+)/g, (m, tag, txt)=>{
+            if (tag) html += tag;
+            else if (txt) {
+                let remain = charIndex - count;
+                if (remain > 0) {
+                    html += txt.substring(0, remain);
+                    count += txt.length;
+                }
+            }
+            return '';
+        });
+        element.innerHTML = html + '<span class="typewriter-dash">|</span>';
+        if (charIndex < plainText.length) setTimeout(type, 60);
+        else {
+            element.innerHTML = html; // Remove dash at end
+            if (callback) callback();
+        }
+    }
+    type();
+}
+document.addEventListener("DOMContentLoaded", ()=>{
+    const restOfContent = document.querySelectorAll('#content > *:not(#intro)');
+    const footer = document.querySelector('footer');
+    const introHeaders = document.querySelectorAll('#intro-text .intro-header');
+    const introTypewriter = document.querySelector('#intro-text .intro-typewriter');
+    const introDescription = document.querySelector('#intro-text .intro-description');
+    const typewriterSpan = document.getElementById('typewriter');
+    gsap.set([
+        restOfContent,
+        footer
+    ], {
+        opacity: 0
+    });
+    gsap.set([
+        introHeaders,
+        introTypewriter,
+        introDescription
+    ], {
+        opacity: 0
+    });
+    function showRestOfPage() {
+        gsap.to([
+            restOfContent,
+            footer
+        ], {
+            opacity: 1,
+            duration: 1
+        });
+    }
+    if (!localStorage.getItem('visited')) // Animate headers in
+    gsap.to(introHeaders, {
+        opacity: 1,
+        duration: 0.7,
+        stagger: 0.2,
+        onComplete: ()=>{
+            // Animate typewriter container in
+            gsap.to(introTypewriter, {
+                opacity: 1,
+                duration: 0.7,
+                onComplete: ()=>{
+                    // Start typewriter effect
+                    runTypewriter(typewriterSpan, typewriterTexts[0], ()=>{
+                        // Animate description in
+                        gsap.to(introDescription, {
+                            opacity: 1,
+                            duration: 0.7,
+                            onComplete: ()=>{
+                                // Fade in rest of page
+                                showRestOfPage();
+                                localStorage.setItem('visited', 'true');
+                                // Start loop from second line
+                                textIndex = 1;
+                                charIndex = 0;
+                                isDeleting = false;
+                                setTimeout(type, 500);
+                            }
+                        });
+                    });
+                }
+            });
+        }
+    });
+    else {
+        // Show everything instantly
+        gsap.set([
+            restOfContent,
+            footer,
+            introHeaders,
+            introTypewriter,
+            introDescription
+        ], {
+            opacity: 1
+        });
+        // Start loop
+        textIndex = 0;
+        charIndex = 0;
+        isDeleting = false;
+        type();
+    }
+    const dotlottie = new (0, _dotlottieWeb.DotLottie)({
+        autoplay: true,
+        loop: true,
+        canvas: document.querySelector('#dotlottie-canvas'),
+        src: "https://lottie.host/a1bd321c-ed9e-4184-8a2f-db39b0512094/gVrbk5r8vz.lottie"
+    });
+    document.getElementById("themeToggle").addEventListener("click", ()=>{
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute("data-bs-theme");
+        html.setAttribute("data-bs-theme", currentTheme === "light" ? "dark" : "light");
+    });
+    //Bubble Animation
+    const cloud = document.querySelector('.icon-cloud');
+    if (cloud) {
+        const icons = cloud.querySelectorAll('.skill-icon');
+        const cloudWidth = cloud.offsetWidth;
+        const cloudHeight = cloud.offsetHeight;
+        const iconSize = 60;
+        const padding = 20;
+        icons.forEach((icon)=>{
+            // Random Initial Position
+            const x = Math.random() * (cloudWidth - iconSize - padding * 2) + padding;
+            const y = Math.random() * (cloudHeight - iconSize - padding * 2) + padding;
+            icon.style.left = `${x}px`;
+            icon.style.top = `${y}px`;
+            // Animate
+            gsap.to(icon, {
+                x: `+=${Math.random() * 120 - 60}`,
+                y: `+=${Math.random() * 120 - 60}`,
+                repeat: -1,
+                yoyo: true,
+                duration: 2 + Math.random() * 2,
+                ease: "sine.inOut",
+                delay: Math.random()
+            });
+        });
+    }
+});
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
+const typewriterElement = document.getElementById('typewriter');
 function type() {
     const currentText = typewriterTexts[textIndex];
-    const plainText = currentText.replace(/<[^>]+>/g, ''); // Remove HTML tags for typing effect
+    const plainText = currentText.replace(/<[^>]+>/g, '');
     let displayText;
     if (isDeleting) {
         charIndex--;
@@ -735,32 +871,6 @@ function type() {
     }
     setTimeout(type, typeSpeed);
 }
-type();
-document.addEventListener("DOMContentLoaded", ()=>{
-    const cloud = document.querySelector('.icon-cloud');
-    const icons = document.querySelectorAll('.skill-icon');
-    const cloudWidth = cloud.offsetWidth;
-    const cloudHeight = cloud.offsetHeight;
-    const iconSize = 60;
-    const padding = 20;
-    icons.forEach((icon)=>{
-        // Radom Initial Position
-        const x = Math.random() * (cloudWidth - iconSize - padding * 2) + padding;
-        const y = Math.random() * (cloudHeight - iconSize - padding * 2) + padding;
-        icon.style.left = `${x}px`;
-        icon.style.top = `${y}px`;
-        // Animate
-        gsap.to(icon, {
-            x: `+=${Math.random() * 120 - 60}`,
-            y: `+=${Math.random() * 120 - 60}`,
-            repeat: -1,
-            yoyo: true,
-            duration: 2 + Math.random() * 2,
-            ease: "sine.inOut",
-            delay: Math.random()
-        });
-    });
-});
 
 },{"@lottiefiles/dotlottie-web":"8p4ks"}],"8p4ks":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
