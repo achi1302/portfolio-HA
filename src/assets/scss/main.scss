@@ -16,6 +16,12 @@ footer {
   opacity: 0;
 }
 
+nav,
+#socials,
+#intro-animation {
+  opacity: 0;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;

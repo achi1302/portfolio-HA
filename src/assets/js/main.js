@@ -54,6 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const introHeaders = document.querySelectorAll('#intro-text .intro-header');
   const introTypewriter = document.querySelector('#intro-text .intro-typewriter');
   const introDescription = document.querySelector('#intro-text .intro-description');
+  const navbar = document.querySelector('nav');
+  const socials = document.getElementById('socials');
+  const introAnimation = document.getElementById('intro-animation');
   const typewriterSpan = document.getElementById('typewriter');
 
   gsap.set([restOfContent, footer], { opacity: 0 });
@@ -68,28 +71,35 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.to(introHeaders, {
       opacity: 1,
       duration: 0.7,
-      stagger: 0.2,
+      stagger: 0.7,
       onComplete: () => {
         // Animate typewriter container in
         gsap.to(introTypewriter, {
           opacity: 1,
           duration: 0.7,
           onComplete: () => {
-            // Start typewriter effect
+            // Start typewriter effect for first line
             runTypewriter(typewriterSpan, typewriterTexts[0], () => {
-              // Animate description in
-              gsap.to(introDescription, {
+              // Fade in navbar, socials, and intro animation
+              gsap.to([navbar, socials, introAnimation], {
                 opacity: 1,
                 duration: 0.7,
                 onComplete: () => {
-                  // Fade in rest of page
-                  showRestOfPage();
-                  localStorage.setItem('visited', 'true');
-                  // Start loop from second line
-                  textIndex = 1;
-                  charIndex = 0;
-                  isDeleting = false;
-                  setTimeout(type, 500);
+                  // Animate description in
+                  gsap.to(introDescription, {
+                    opacity: 1,
+                    duration: 0.7,
+                    onComplete: () => {
+                      // Fade in rest of page
+                      showRestOfPage();
+                      localStorage.setItem('visited', 'true');
+                      // Start typewriter loop
+                      textIndex = 0;
+                      charIndex = typewriterTexts[0].replace(/<[^>]+>/g, '').length;
+                      isDeleting = true;
+                      setTimeout(type, 500);
+                    }
+                  });
                 }
               });
             });
@@ -99,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   } else {
     // Show everything instantly
-    gsap.set([restOfContent, footer, introHeaders, introTypewriter, introDescription], { opacity: 1 });
+    gsap.set([navbar, socials, introAnimation, restOfContent, footer, introHeaders, introTypewriter, introDescription], { opacity: 1 });
     // Start loop
     textIndex = 0;
     charIndex = 0;
