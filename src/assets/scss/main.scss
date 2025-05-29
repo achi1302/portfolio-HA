@@ -70,6 +70,13 @@ a {
   color: var(--bs-instagram);
 }
 
+.logo-dark { display: none; }
+.logo-light { display: inline; }
+.logo-footer { display: inline; }
+[data-bs-theme="dark"] .logo-dark { display: inline; }
+[data-bs-theme="dark"] .logo-light { display: none; }
+[data-bs-theme="dark"] .logo-footer { display: none; }
+
 
 #content {
   top: 5rem;
@@ -149,10 +156,33 @@ a {
   object-fit: cover;
   border: 5px var(--bs-body-color) solid;
 }
+.skill-icons-group {
+  display: inline-block;
+}
 .aaca-link{
   color: var(--bs-body-color)
 }
-
+#portfolio-image { display: inline; }
+#portfolio-image-dark { display: none; }
+[data-bs-theme="dark"] #portfolio-image { display: none; }
+[data-bs-theme="dark"] #portfolio-image-dark { display: inline; }
+.skill-tooltip {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2.5rem;
+  text-align: center;
+  color: var(--bs-intro);
+  background: var(--bs-navbar-bg);
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 10;
+}
 
 #contact-bg {
   background-color: var(--bs-contact-square);

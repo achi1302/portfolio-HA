@@ -14,14 +14,15 @@
     <link rel="stylesheet" href="./assets/scss/main.scss"> <!--Custom-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent" data-bs-offset="90" tabindex="0">
+<body>
 
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid">
             <div class="d-flex w-100 align-items-center">
                 <!-- Left -->
                 <div class="flex-grow-1 d-flex justify-content-start justify-content-lg-center">
-                    <a class="navbar-brand m-0" href="#">H</a>
+                    <a class="navbar-brand m-0" href="#"><img class="logo-light" src="./assets/images/logo-light.png" alt="Logo_Light" width="50" height="50"></a>
+                    <a class="navbar-brand m-0" href="#"><img class="logo-dark" src="./assets/images/logo-dark.png" alt="Logo_Dark" width="50" height="50"></a>
                 </div>
                 <!-- Center -->
                 <div class="flex-grow-1 d-none d-lg-flex justify-content-center">
@@ -72,7 +73,7 @@
             </a>
         </div>
 
-        <div class="flex-grow-1 position-relative ms-20 mt-4" id="content">
+        <div class="flex-grow-1 position-relative ms-20 mt-4" id="content" data-bs-spy="scroll" data-bs-target=".navbar-nav" data-bs-offset="90" tabindex="0">
 
             <div class="d-flex align-items-center pb-17" id="intro">
                 <div class="flex-grow-1 w-50" id="intro-text">
@@ -89,7 +90,7 @@
                 </div> 
             </div>
 
-            <div class="w-100 pb-12" id="about-me">
+            <div class="w-100 pb-12 ps-4" id="about-me">
                 <h2 class="mb-5 w-80 text-center">Get To Know Me</h2>
                 
                 <div class="d-flex align-items-start flex-wrap justify-content-start" id="about-me-content">
@@ -137,7 +138,7 @@
                 </div>
             </div>
 
-            <div class="w-100 pb-12" id="work-projects">
+            <div class="w-100 pb-12 ps-4" id="work-projects">
                 <h2 class="text-center w-80 mb-7">Work and Projects</h2>
 
                 <div class="vstack gap-11" id="work-projects-content">
@@ -152,11 +153,12 @@
                             <h4 class="w-75">
                                 Designed and developed Auto Aire California’s (AACA) landing page using React and Tailwind CSS. You can check it out at <a href="https://autoairecalifornia.com" target="_blank" rel="noopener noreferrer">autoairecalifornia.com</a>.
                             </h4>
-                            <div class="position-relative w-75">
+                            <div class="position-relative w-auto skill-icons-group">
                                 <img class="skill" src="./assets/images/frontend_icons/react.png" alt="React" width="60" height="60">
                                 <img class="skill" src="./assets/images/frontend_icons/tailwind.png" alt="Tailwindcss" width="75" height="60">
                                 <img class="skill" src="./assets/images/git_icons/github.png" alt="Github" width="60" height="60">
                                 <img class="skill" src="./assets/images/git_icons/git.png" alt="Git" width="60" height="60">
+                                <div class="skill-tooltip"></div>
                             </div>
                         </div>
                     </div>
@@ -172,13 +174,14 @@
                             <h4 class="w-75">
                                 To complete my Capstone Project, me and a team of developers and designers came up with a new <strong>Point of Sale System</strong> for a local restaurant called “Proyecto Xocolate”. This was made with React and PostgreSQL.
                             </h4>
-                            <div class="position-relative w-75">
+                            <div class="position-relative w-auto skill-icons-group">
                                 <img class="skill" src="./assets/images/frontend_icons/react.png" alt="React" width="60" height="60">
                                 <img class="skill" src="./assets/images/database_icons/postgre.png" alt="PostgreSQL" width="60" height="60">
                                 <img class="skill" src="./assets/images/backend_icons/node.png" alt="NodeJS" width="60" height="60">
                                 <img class="skill" src="./assets/images/backend_icons/express.png" alt="ExpressJS" width="60" height="60">
                                 <img class="skill" src="./assets/images/git_icons/github.png" alt="Github" width="60" height="60">
                                 <img class="skill" src="./assets/images/git_icons/git.png" alt="Git" width="60" height="60">
+                                <div class="skill-tooltip"></div>
                             </div>
                         </div>
                     </div>
@@ -194,10 +197,11 @@
                             <h4 class="w-75">
                                 At Santinos Digital, I mainly worked as a <strong>Web Developer</strong>, providing support to the Innovation and Design Team. On my time there, I managed to make a new <strong>landing page in WordPress</strong>, and assisted in the creation of dashboards for analytics.
                             </h4>
-                            <div class="position-relative w-75">
+                            <div class="position-relative w-auto skill-icons-group">
                                 <img class="skill" src="./assets/images/frontend_icons/wordpress.png" alt="WordPress" width="60" height="60">
                                 <img class="skill" src="./assets/images/frontend_icons/html.png" alt="HTML" width="60" height="60">
                                 <img class="skill" src="./assets/images/frontend_icons/css.png" alt="CSS" width="60" height="60">
+                                <div class="skill-tooltip"></div>
                             </div>
                         </div>
                     </div>
@@ -206,19 +210,21 @@
                         <div id="port-left">
                             <h3 class="text-center">My Portfolio</h3>
                             <div id="port-images">
-                                <img class="img-fluid rounded" src="./assets/images/work_projects/portfolio.png" alt="Portfolio">
+                                <img class="img-fluid rounded" id="portfolio-image" src="./assets/images/work_projects/portfolio.png" alt="Portfolio">
+                                <img class="img-fluid rounded" id="portfolio-image-dark" src="./assets/images/work_projects/portfolio-dark.png" alt="Portfolio_Dark">
                             </div>
                         </div>
                         <div class="w-50 ms-5" id="port-right">
                             <h4 class="w-75">
                                 This portfolio was designed and developed by me. Made with HTML, SCSS, JavaScript, Bootstrap and a little of GSAP, to demonstrate that you can create a beautiful, responsive and interactive web product with <strong>just the basics</strong>.
                             </h4>
-                            <div class="position-relative w-75">
+                            <div class="position-relative w-auto skill-icons-group">
                                 <img class="skill" src="./assets/images/frontend_icons/html.png" alt="HTML" width="60" height="60">
                                 <img class="skill" src="./assets/images/frontend_icons/sass.png" alt="SCSS" width="60" height="60">
                                 <img class="skill" src="./assets/images/frontend_icons/js.png" alt="JavaScript" width="60" height="60">
                                 <img class="skill" src="./assets/images/frontend_icons/bootstrap.png" alt="Bootstarp" width="60" height="60">
                                 <img class="skill" src="./assets/images/frontend_icons/gsap.png" alt="GSAP" width="60" height="60">
+                                <div class="skill-tooltip"></div>
                             </div>
                         </div>
                     </div>
@@ -234,9 +240,10 @@
                             <h4 class="w-75">
                                 GymTrack is an application designed to help users <strong>track their progress at the gym</strong>. It allows users to log and monitor their workouts in an intuitive way, making it easier to plan and follow their routines. For this mobile development, I used Kotlin and Firebase.
                             </h4>
-                            <div class="position-relative w-75">
+                            <div class="position-relative w-auto skill-icons-group">
                                 <img class="skill" src="./assets/images/backend_icons/kotlin.png" alt="Kotlin" width="60" height="60">
                                 <img class="skill" src="./assets/images/database_icons/firebase.png" alt="Firebase" width="60" height="60">
+                                <div class="skill-tooltip"></div>
                             </div>
                         </div>
                     </div>
@@ -252,9 +259,10 @@
                             <h4 class="w-75">
                                 In this project I tried to find a direct <strong>correlation between crime and poverty</strong> in Mexico and the US. The objective was to demonstrate that crime can be a symptom of <strong>inequality and lack of oportunities</strong>. Made with three different datasets, managed with Python, and visualized with PowerBi.
                             </h4>
-                            <div class="position-relative w-75">
+                            <div class="position-relative w-auto skill-icons-group">
                                 <img class="skill" src="./assets/images/data_science_engineering_icons/python.png" alt="Python" width="60" height="60">
                                 <img class="skill" src="./assets/images/data_science_engineering_icons/powerbi.png" alt="PowerBi" width="60" height="60">
+                                <div class="skill-tooltip"></div>
                             </div>
                         </div>
                     </div>
@@ -270,13 +278,14 @@
                             <h4 class="w-75">
                                 A combination of Letterboxd, Goodreads and Discord. Leggiamo is a rough prototype of a web application that lets users create public or private reading groups, share thoughts with others, and rate any book they like. Angular and MongoDB were the weapons of choice for this project.
                             </h4>
-                            <div class="position-relative w-75">
+                            <div class="position-relative w-auto skill-icons-group">
                                 <img class="skill" src="./assets/images/frontend_icons/html.png" alt="HTML" width="60" height="60">
                                 <img class="skill" src="./assets/images/frontend_icons/css.png" alt="CSS" width="60" height="60">
                                 <img class="skill" src="./assets/images/frontend_icons/angular.png" alt="Angular" width="60" height="60">
                                 <img class="skill" src="./assets/images/backend_icons/node.png" alt="NodeJS" width="60" height="60">
                                 <img class="skill" src="./assets/images/backend_icons/express.png" alt="ExpressJS" width="60" height="60">
                                 <img class="skill" src="./assets/images/database_icons/mongo.png" alt="MongoDB" width="60" height="60">
+                                <div class="skill-tooltip"></div>
                             </div>
                         </div>
                     </div>
@@ -294,10 +303,11 @@
                             <h4 class="w-75">
                                 As a way to learn about Data Engineering, I began working on a project to compare the <strong>usage of NYC taxis and Uber</strong>. I plan on transforming it into a <strong>socioeconomic analysis</strong>. It is being made mainly with Apache Spark, and Snowflake.
                             </h4>
-                            <div class="position-relative w-75">
+                            <div class="position-relative w-auto skill-icons-group">
                                 <img class="skill" src="./assets/images/data_science_engineering_icons/python.png" alt="Python" width="60" height="60">
                                 <img class="skill" src="./assets/images/data_science_engineering_icons/apachespark.png" alt="ApacheSpark" width="60" height="60">
                                 <img class="skill" src="./assets/images/data_science_engineering_icons/snowflake.png" alt="Snowflake" width="60" height="60">
+                                <div class="skill-tooltip"></div>
                             </div>
                         </div>
                     </div>
@@ -313,15 +323,16 @@
                             <h4 class="w-75">
                                 Driven by curiosity and a passion for Data Science, I’m developing a predictive model to estimate the <strong>probability of winning the NBA championship</strong> by analyzing key stats and engineering new features.
                             </h4>
-                            <div class="position-relative w-75">
+                            <div class="position-relative w-auto skill-icons-group">
                                 <img class="skill" src="./assets/images/data_science_engineering_icons/python.png" alt="Python" width="60" height="60">
+                                <div class="skill-tooltip"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="w-100 pb-8" id="contact">
+            <div class="w-100 pb-8 ps-4" id="contact">
                 <h2 class="text-center w-80 mb-5">Contact Me!</h2>
                 <div class="d-flex justify-content-center align-items-center flex-wrap w-80 rounded-5 pt-5" id="contact-bg">
                     <form class="w-75" >
@@ -356,19 +367,20 @@
         </div>
     </div>
     <footer class="text-center mt-5 border-top w-100 py-7">
-        <div class="container-fluid w-80">
+        <div class="container-fluid w-70">
             <div class="d-flex justify-content-between align-items-center flex-wrap">
                 <div>
-                    <a class="navbar-brand" href="#">H</a>
+                    <a class="navbar-brand m-0" href="#"><img class="logo-footer" src="./assets/images/logo-footer.png" alt="Logo_Footer" width="50" height="50"></a>
+                    <a class="navbar-brand m-0" href="#"><img class="logo-dark" src="./assets/images/logo-dark.png" alt="Logo_Dark" width="50" height="50"></a>
                 </div> 
-                <div class="text-center">
+                <div class="text-center ps-10">
                     <div class="d-flex align-items-center justify-content-center mb-2 gap-3">
                         <i class="bi bi-envelope-at me-2" style="font-size: 2rem;"></i>
                         <span>alexanderson.chacon@gmail.com</span>
                         <i class="bi bi-telephone ms-4 me-2" style="font-size: 2rem;"></i>
                         <span>+52 (686) 176-2917</span>
                     </div>
-                        <span class="mb-0">© 2023 Hector Alexanderson.</span>
+                        <span class="mb-0">© 2025 Hector Alexanderson.</span>
                 </div>
                 <div>
                     <div id="footer-socials" class="d-flex gap-3 justify-content-end">

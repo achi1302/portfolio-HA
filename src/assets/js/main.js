@@ -158,6 +158,20 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // Skills Tooltips
+  document.querySelectorAll('#work-projects .position-relative.w-auto').forEach(group => {
+    const tooltip = group.querySelector('.skill-tooltip');
+    group.querySelectorAll('.skill').forEach(icon => {
+      icon.addEventListener('mouseenter', () => {
+        tooltip.textContent = icon.alt;
+        tooltip.style.opacity = 1;
+      });
+      icon.addEventListener('mouseleave', () => {
+        tooltip.style.opacity = 0;
+      });
+    });
+  });
 });
 
 let textIndex = 0;
