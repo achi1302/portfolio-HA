@@ -117,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     type();
   }
 
+  // INTRO ANIMATION
   const dotlottie = new DotLottie ({
     autoplay: true,
     loop: true,
@@ -124,13 +125,14 @@ document.addEventListener("DOMContentLoaded", () => {
     src: "https://lottie.host/a1bd321c-ed9e-4184-8a2f-db39b0512094/gVrbk5r8vz.lottie",
   });
 
+  // THEME TOGGLE
   document.getElementById("themeToggle").addEventListener("click", () => {
     const html = document.documentElement;
     const currentTheme = html.getAttribute("data-bs-theme");
     html.setAttribute("data-bs-theme", currentTheme === "light" ? "dark" : "light");
   });
 
-  //Bubble Animation
+  //BUBBLE ANIMATION
   const cloud = document.querySelector('.icon-cloud');
   if (cloud) {
     const icons = cloud.querySelectorAll('.skill-icon');
@@ -159,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Skills Tooltips
+  // SKILL TOOLTIP
   document.querySelectorAll('#work-projects .position-relative.w-auto').forEach(group => {
     const tooltip = group.querySelector('.skill-tooltip');
     group.querySelectorAll('.skill').forEach(icon => {
@@ -172,6 +174,100 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+  // AUTO SCROLL
+  const autoSections = [
+  document.getElementById('intro'),
+  document.getElementById('about-me'),
+  document.getElementById('work-projects')
+  ];
+
+  let autoScrollEnabled = true;
+  let currentSection = 0;
+  let isAutoScrolling = false;
+
+  function scrollToSection(index) {
+    if (index < 0 || index >= autoSections.length) return;
+    isAutoScrolling = true;
+    autoSections[index].scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => { isAutoScrolling = false; }, 700);
+  }
+
+  function handleWheel(e) {
+    if (!autoScrollEnabled || isAutoScrolling) return;
+    e.preventDefault();
+    if (e.deltaY > 0 && currentSection < autoSections.length - 1) {
+      currentSection++;
+      scrollToSection(currentSection);
+      if (autoSections[currentSection].id === 'work-projects') {
+        disableAutoScroll();
+      }
+    } else if (e.deltaY < 0 && currentSection > 0) {
+      currentSection--;
+      scrollToSection(currentSection);
+    }
+  }
+
+  //Touch Navigation
+  let touchStartY = null;
+  function handleTouchStart(e) {
+    if (!autoScrollEnabled) return;
+    if (e.touches.length === 1) {
+      touchStartY = e.touches[0].clientY;
+    }
+  }
+  function handleTouchMove(e) {
+    if (!autoScrollEnabled || isAutoScrolling || touchStartY === null) return;
+    const touchEndY = e.touches[0].clientY;
+    const deltaY = touchStartY - touchEndY;
+    if (Math.abs(deltaY) > 60) { // Sensitivity threshold
+      if (deltaY > 0 && currentSection < autoSections.length - 1) {
+        currentSection++;
+        scrollToSection(currentSection);
+        if (autoSections[currentSection].id === 'work-projects') {
+          disableAutoScroll();
+        }
+      } else if (deltaY < 0 && currentSection > 0) {
+        currentSection--;
+        scrollToSection(currentSection);
+      }
+      touchStartY = null; // Prevent multiple triggers
+    }
+  }
+  function handleTouchEnd() {
+    touchStartY = null;
+  }
+  
+  //Disable Auto Scroll
+  function disableAutoScroll() {
+    autoScrollEnabled = false;
+    window.removeEventListener('wheel', handleWheel, { passive: false });
+    window.removeEventListener('touchstart', handleTouchStart, { passive: false });
+    window.removeEventListener('touchmove', handleTouchMove, { passive: false });
+    window.removeEventListener('touchend', handleTouchEnd, { passive: false });
+  }
+
+  // Enable on large screens or touch devices
+  if (window.innerWidth > 991 || 'ontouchstart' in window) {
+    window.addEventListener('wheel', handleWheel, { passive: false });
+    window.addEventListener('touchstart', handleTouchStart, { passive: false });
+    window.addEventListener('touchmove', handleTouchMove, { passive: false });
+    window.addEventListener('touchend', handleTouchEnd, { passive: false });
+  }
+
+  //Keep in sync
+  function updateCurrentSection() {
+  if (!autoScrollEnabled) return;
+    for (let i = 0; i < autoSections.length; i++) {
+      const rect = autoSections[i].getBoundingClientRect();
+      if (rect.top <= 100 && rect.bottom > 100) {
+        currentSection = i;
+        break;
+      }
+    }
+  }
+  window.addEventListener('scroll', updateCurrentSection);
+
 });
 
 let textIndex = 0;
