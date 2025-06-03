@@ -126,12 +126,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // THEME TOGGLE
-  document.getElementById("themeToggle").addEventListener("click", () => {
+  document.getElementById("themeToggle").addEventListener("click", toggleTheme);
+  const themeToggleMobile = document.getElementById("themeToggleMobile");
+  if (themeToggleMobile) {
+      themeToggleMobile.addEventListener("click", toggleTheme);
+  }
+  function toggleTheme() {
     const html = document.documentElement;
     const currentTheme = html.getAttribute("data-bs-theme");
     html.setAttribute("data-bs-theme", currentTheme === "light" ? "dark" : "light");
-  });
-
+  }
   //BUBBLE ANIMATION
   const cloud = document.querySelector('.icon-cloud');
   if (cloud) {
@@ -162,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // SKILL TOOLTIP
-  document.querySelectorAll('#work-projects .position-relative.w-auto').forEach(group => {
+  document.querySelectorAll('#work-projects .position-relative').forEach(group => {
     const tooltip = group.querySelector('.skill-tooltip');
     group.querySelectorAll('.skill').forEach(icon => {
       icon.addEventListener('mouseenter', () => {
