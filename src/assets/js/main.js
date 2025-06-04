@@ -1,7 +1,5 @@
 import { DotLottie } from '@lottiefiles/dotlottie-web';
 
-
-
 const typewriterTexts = [
   `<span class="system">System</span>.<span class="out">out</span>.<span class="print-write">println</span><span class="parenthesis-b">(</span><span class="message">"Computer Science Graduate"</span><span class="parenthesis-b">)</span>;`,
   `<span class="document"><span style="color: var(--bs-body-color)">&lt;</span>Web Developer<span style="color: var(--bs-body-color)">/&gt;</span></span>`,
@@ -281,6 +279,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   window.addEventListener('scroll', updateCurrentSection);
 
+  // EmailJS
+  const PUBLIC_KEY = 'AnMHiTtLNpK73Zr6h';
+  const SERVICE_ID = 'service_ip7x2fm';
+  const TEMPLATE_ID = 'template_qy2l3af';
+
+  window.emailjs.init(PUBLIC_KEY);
+
+  const form = document.getElementById('contact-form');
+  if(form) {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      window.emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this)
+        .then(function() {
+          alert('Message sent!');
+          form.reset();
+        }, (error) => {
+          alert('Failed to send message.');
+          console.error('EmailJS error:', error);
+        });
+    });
+  }
 });
 
 let textIndex = 0;

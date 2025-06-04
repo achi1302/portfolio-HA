@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
+    <link rel="icon" type="image/png" href="./assets/images/logo-icon.png" />
 
     <link rel="stylesheet" href="./assets/scss/main.scss"> <!--Custom-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -342,18 +343,18 @@
                 <div class="mb-8" id="contact">
                     <h2 class="text-center mb-5">Contact Me!</h2>
                     <div class="d-flex justify-content-center align-items-center flex-wrap rounded-5 pt-5" id="contact-bg">
-                        <form class="w-80 w-md-75" >
+                        <form class="w-80 w-md-75" id="contact-form">
                             <div class="mb-3">
                                 <label for="Name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="Name" aria-describedby="nameHelp">
+                                <input type="text" class="form-control" id="Name" aria-describedby="nameHelp" name="name">
                             </div>
                             <div class="mb-3">
                                 <label for="Email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+                                <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" name="email">
                             </div>
                             <div class="mb-3">
                                 <label for="Message" class="form-label">Message</label>
-                                <textarea class="form-control" id="Message" rows="3"></textarea>
+                                <textarea class="form-control" id="Message" rows="3" name="message"></textarea>
                             </div>
                             <div class="row g-3 align-items-center" id="contact-info">
                                 <div class="col-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start mb-2 mb-md-0">
@@ -426,7 +427,7 @@
     </footer>
 
     
-    
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script type="module" src="./assets/js/main.js"></script>
