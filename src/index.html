@@ -16,7 +16,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg d-flex d-lg-none">
         <div class="container-fluid">
             <div class="d-flex w-100 align-items-center">
                 <!-- Left -->
@@ -35,7 +35,7 @@
                 </div>
                 <!-- Right -->
                 <div class="flex-grow-1 d-flex justify-content-end justify-content-lg-center align-items-center">
-                    <i class="bi bi-brightness-high d-none d-lg-block" style="font-size: 1.5rem; color: var(--bs-body-color);" id="themeToggle"></i>
+                    <i class="bi bi-brightness-high d-none d-lg-block" style="font-size: 1.5rem; color: var(--bs-body-color);" id="themeToggleMobile"></i>
                     <button class="navbar-toggler ms-2 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -60,7 +60,7 @@
         <div class="row gx-0 min-vh-100">
 
             <!-- Socials -->
-            <div class="col-2 d-none d-md-flex" id="socials">
+            <div class="col-2 d-none d-lg-flex" id="socials">
                 <div class="socials-sticky d-flex flex-column align-items-center w-100">
                     <a href="https://www.linkedin.com/in/hector-alexanderson-0294342b3/" target="_blank">
                         <i class="bi bi-linkedin"></i>
@@ -78,10 +78,11 @@
             </div>
 
             <!-- Content -->
-            <main class="col-12 col-md-8 px-0 position-relative" id="content" data-bs-spy="scroll" data-bs-target="#scrollspy-nav" data-bs-offset="90" tabindex="0">
+            <main class="col-12 col-lg-8 px-0 position-relative mt-7" id="content" data-bs-spy="scroll" data-bs-target="#scrollspy-nav" data-bs-offset="90" tabindex="0">
 
-                <div class="d-flex align-items-center pb-17" id="intro">
-                    <div class="flex-grow-1" id="intro-text">
+                <!-- Intro Section -->
+                <div class="row align-items-center mb-22" id="intro">
+                    <div class="col-12" id="intro-text">
                         <h1 class="intro-header">Hello I'm</h1>
                         <h1 class="mb-5 intro-header">Hector Alexanderson</h1>
                         <h3 class="mb-5 intro-typewriter">
@@ -89,15 +90,13 @@
                         </h3>
                         <h4 class="lh-lg intro-description">
                             I’m a Computer Science Graduate who is passionate about <strong>Data Engineering, Data Science, Web Development and Full-Stack Development</strong>. 
-                            I enjoy story telling by building data solutions, creating efficient backend systems, and developing intuitive interfaces.</h4>
+                            I enjoy story telling by building data solutions, creating efficient backend systems, and developing intuitive interfaces.
+                        </h4>
                     </div>
-                    <!-- <div id="intro-animation" class="flex-shrink-0 d-flex justify-content-center">
-                        <canvas id="dotlottie-canvas" style="width: 500px; height: 500px;"></canvas>
-                        <img src="./assets/images/4824797.png" width="250px" height="250px" class="img-fluid" alt="data-science">
-                    </div>  -->
                 </div>
 
-                <div class="pb-12" id="about-me">
+                <!-- About Me Section -->
+                <div class="mb-12" id="about-me">
                     <h2 class="mb-5 text-center">Get To Know Me</h2>
                     
                     <div class="row" id="about-me-content">
@@ -144,7 +143,8 @@
                     </div>
                 </div>
 
-                <div class="pb-12" id="work-projects">
+                <!-- Work and Projects Section -->
+                <div class="mb-12" id="work-projects">
                     <h2 class="text-center mb-5">Work and Projects</h2>
                     <div id="work-projects-content">
 
@@ -225,7 +225,7 @@
                                     This portfolio was designed and developed by me. Made with HTML, SCSS, JavaScript, Bootstrap and a little of GSAP, to demonstrate that you can create a beautiful, responsive and interactive web product with <strong>just the basics</strong>.
                                 </h4>
                                 <div class="position-relative skill-icons-group">
-                                     <img class="skill" src="./assets/images/frontend_icons/html.png" alt="HTML" width="60" height="60">
+                                    <img class="skill" src="./assets/images/frontend_icons/html.png" alt="HTML" width="60" height="60">
                                     <img class="skill" src="./assets/images/frontend_icons/sass.png" alt="SCSS" width="60" height="60">
                                     <img class="skill" src="./assets/images/frontend_icons/js.png" alt="JavaScript" width="60" height="60">
                                     <img class="skill" src="./assets/images/frontend_icons/bootstrap.png" alt="Bootstarp" width="60" height="60">
@@ -338,7 +338,8 @@
                     </div>
                 </div>
 
-                <div class="pb-8" id="contact">
+                <!-- Contact Section -->
+                <div class="mb-8" id="contact">
                     <h2 class="text-center mb-5">Contact Me!</h2>
                     <div class="d-flex justify-content-center align-items-center flex-wrap rounded-5 pt-5" id="contact-bg">
                         <form class="w-80 w-md-75" >
@@ -373,34 +374,39 @@
             </main>
 
             <!-- Scrollspy Navigation -->
-            <aside class="col-2 d-none d-md-flex flex-column align-items-center justify-content-center py-4" id="scrollspy-nav">
-                <ul class="nav flex-column">
+            <aside class="col-2 d-none d-lg-flex" id="scrollspy-nav">
+                <ul class="nav d-flex flex-column align-items-center w-100">
                     <li class="nav-item"><a class="nav-link" href="#intro">Intro</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about-me">About Me</a></li>
                     <li class="nav-item"><a class="nav-link" href="#work-projects">Work</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <i class="bi bi-brightness-high" id="themeToggleScrollSpy"></i>
                 </ul>
             </aside>
         </div>
     </div>
     <footer class="text-center mt-5 border-top w-100 py-7">
-        <div class="container-fluid w-70">
-            <div class="d-flex justify-content-between align-items-center flex-wrap">
-                <div>
+        <div class="container-fluid w-100 px-3">
+            <div class="row align-items-center justify-content-center gy-4 footer-tight-gap">
+                <div class="col-12 col-md-auto d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
                     <a class="navbar-brand m-0" href="#"><img class="logo-footer" src="./assets/images/logo-footer.png" alt="Logo_Footer" width="50" height="50"></a>
-                    <a class="navbar-brand m-0" href="#"><img class="logo-dark" src="./assets/images/logo-dark.png" alt="Logo_Dark" width="50" height="50"></a>
-                </div> 
-                <div class="text-center ps-10">
-                    <div class="d-flex align-items-center justify-content-center mb-2 gap-3">
-                        <i class="bi bi-envelope-at me-2" style="font-size: 2rem;"></i>
-                        <span>alexanderson.chacon@gmail.com</span>
-                        <i class="bi bi-telephone ms-4 me-2" style="font-size: 2rem;"></i>
-                        <span>+52 (686) 176-2917</span>
-                    </div>
-                        <span class="mb-0">© 2025 Hector Alexanderson.</span>
+                    <a class="navbar-brand m-0 ms-2" href="#"><img class="logo-dark" src="./assets/images/logo-dark.png" alt="Logo_Dark" width="50" height="50"></a>
                 </div>
-                <div>
-                    <div id="footer-socials" class="d-flex gap-3 justify-content-end">
+                <div class="col-12 col-md-auto text-center">
+                    <div class="d-flex flex-column flex-md-row align-items-center justify-content-center mb-2 gap-3">
+                        <span class="d-flex align-items-center mb-2 mb-md-0">
+                            <i class="bi bi-envelope-at me-2" style="font-size: 2rem;"></i>
+                            alexanderson.chacon@gmail.com
+                        </span>
+                        <span class="d-flex align-items-center">
+                            <i class="bi bi-telephone ms-md-4 me-2" style="font-size: 2rem;"></i>
+                            +52 (686) 176-2917
+                        </span>
+                    </div>
+                    <span class="mb-0 small">© 2025 Hector Alexanderson.</span>
+                </div>
+                <div class="col-12 col-md-auto d-flex justify-content-center justify-content-md-end">
+                    <div id="footer-socials" class="d-flex gap-3">
                         <a href="https://www.linkedin.com/in/hector-alexanderson-0294342b3/" target="_blank">
                             <i class="bi bi-linkedin"></i>
                         </a>

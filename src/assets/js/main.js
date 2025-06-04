@@ -56,8 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const introDescription = document.querySelector('#intro-text .intro-description');
   const navbar = document.querySelector('nav');
   const socials = document.getElementById('socials');
-  const introAnimation = document.getElementById('intro-animation');
   const typewriterSpan = document.getElementById('typewriter');
+  const scrollspyNav = document.getElementById('scrollspy-nav');
 
   gsap.set([restOfContent, footer], { opacity: 0 });
   gsap.set([introHeaders, introTypewriter, introDescription], { opacity: 0 });
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Start typewriter effect for first line
             runTypewriter(typewriterSpan, typewriterTexts[0], () => {
               // Fade in navbar, socials, and intro animation
-              gsap.to([navbar, socials, introAnimation], {
+              gsap.to([navbar, socials, scrollspyNav], {
                 opacity: 1,
                 duration: 0.7,
                 onComplete: () => {
@@ -93,6 +93,13 @@ document.addEventListener("DOMContentLoaded", () => {
                       // Fade in rest of page
                       showRestOfPage();
                       localStorage.setItem('visited', 'true');
+                      //Theme toggle, dark then light
+                      setTimeout(() => {
+                        toggleTheme();
+                        setTimeout(() => {
+                          toggleTheme();
+                        }, 2500);
+                      }, 2000);
                       // Start typewriter loop
                       textIndex = 0;
                       charIndex = typewriterTexts[0].replace(/<[^>]+>/g, '').length;
@@ -109,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   } else {
     // Show everything instantly
-    gsap.set([navbar, socials, introAnimation, restOfContent, footer, introHeaders, introTypewriter, introDescription], { opacity: 1 });
+    gsap.set([navbar, socials, scrollspyNav, restOfContent, footer, introHeaders, introTypewriter, introDescription], { opacity: 1 });
     // Start loop
     textIndex = 0;
     charIndex = 0;
@@ -127,6 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // THEME TOGGLE
   document.getElementById("themeToggle").addEventListener("click", toggleTheme);
+  document.getElementById("themeToggleScrollSpy").addEventListener("click", toggleTheme);
   const themeToggleMobile = document.getElementById("themeToggleMobile");
   if (themeToggleMobile) {
       themeToggleMobile.addEventListener("click", toggleTheme);
@@ -186,11 +194,12 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById('work-projects')
   ];
 
-  let autoScrollEnabled = true;
+  let autoScrollEnabled = !localStorage.getItem('visited');
   let currentSection = 0;
   let isAutoScrolling = false;
 
   function scrollToSection(index) {
+    if (!autoScrollEnabled) return;
     if (index < 0 || index >= autoSections.length) return;
     isAutoScrolling = true;
     autoSections[index].scrollIntoView({ behavior: 'smooth' });
