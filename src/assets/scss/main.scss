@@ -46,7 +46,7 @@ h2 {
   white-space: normal;
 }
 h3 {
-  font-size: clamp(1.25rem, 4vw, 2rem);
+  font-size: clamp(1rem, 2.2vw, 2rem);
   word-break: break-word;
   white-space: normal;
 }
@@ -64,6 +64,23 @@ a {
   color: var(--bs-body-color);
   text-decoration: none;
   font-weight: 700;
+}
+
+@media (max-width: 991.98px) {
+  nav.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1050;
+    background: var(--bs-navbar-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  }
+}
+@media (max-width: 991.98px) {
+  #content {
+    margin-top: 70px !important;
+  }
 }
 
 #socials {
@@ -139,20 +156,7 @@ a {
   top: 5rem;
 }
 
-#intro-animation canvas{
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  max-height: 500px;
-  aspect-ratio: 1 / 1;
-  display: block;
-}
-@media (min-width: 992px) {
-  #intro-animation canvas {
-    max-width: 500px;
-    min-height: 350px;
-  }
-}
+
 #typewriter {
   color: var(--bs-intro);
 }
@@ -301,7 +305,22 @@ a {
   box-shadow: 0 2px 16px rgba(0,0,0,0.04);
   padding: 2rem 1rem;
 }
-@media (max-width: 767.98px) {
+@media (min-width: 768px) and (max-width: 1520px) {
+  #contact-info {
+    flex-wrap: wrap;
+  }
+  #contact-info .col-md-5 {
+    min-width: 0;
+  }
+  #contact-info .contact-text {
+    overflow-wrap: anywhere;
+    word-break: break-all;
+    min-width: 0;
+    display: inline-block;
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
   #contact form {
     padding: 0;
   }
@@ -322,6 +341,21 @@ a {
   font-size: 20px;
   border: 2px solid var(--bs-body-color);
   transition: transform 0.2s cubic-bezier(.4,2,.6,1), color 0.2s;
+}
+@media (max-width: 1400px) {
+  .btn {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1300px) {
+  .btn {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1200px) {
+  .btn {
+    font-size: 14px;
+  }
 }
 .btn:hover {
   background-color: var(--bs-body-color);
